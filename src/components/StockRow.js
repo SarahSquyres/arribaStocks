@@ -36,9 +36,7 @@ class StockRow extends Component {
                 dollar_change: dollarChange.toFixed(2), // Format to two decimal places
                 percent_change: percentChange.toFixed(2) + "%",
             });
-
         };
-
         stock.getTodaysOpen(this.props.ticker, handleOpenPrice);
     }
 
@@ -57,10 +55,8 @@ class StockRow extends Component {
                 <td>{this.state.date}</td>
                 <td>{this.state.time}</td>
             </tr>
-
         )
     }
-
 }
 
 export default StockRow;
