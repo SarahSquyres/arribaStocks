@@ -16,13 +16,11 @@ class StockRow extends Component {
     }
     changeStyle() {
         return {
-            color: (this.state.dollar_change > 0) ? '#4caf50' : '#e53935',
-            fontSize: '0.8rem',
-            marginLeft: 5}
+            color: (this.state.dollar_change > 0) ? '#4caf50' : '#e53935'
+        }
     }
 
     applyData(data) {
-        console.log(data);
         // Use setState to update the component's state
         this.setState({
             // Latest data
@@ -32,7 +30,6 @@ class StockRow extends Component {
         });
 
         const handleOpenPrice = (openPrice) => {
-            console.log(this.props.ticker, openPrice)
             const dollarChange = this.state.price - openPrice.price;
             const percentChange = (dollarChange / openPrice.price) * 100;
 
@@ -54,14 +51,14 @@ class StockRow extends Component {
 
     render() {
         return (
-            <li className="list-group-item">
-                {/* Ticker and latest price */}
-                <b>{this.props.ticker}</b> ${this.state.price}
-                <span className="change" style={this.changeStyle()}>
-                    ${this.state.dollar_change}
-                    {this.state.percent_change}
-                </span>
-            </li>
+            <tr>
+                <td>{this.props.ticker}</td>
+                <td>${this.state.price}</td>
+                <td style={this.changeStyle()}>${this.state.dollar_change} ({this.state.percent_change})</td>
+                <td>{this.state.date}</td>
+                <td>{this.state.time}</td>
+            </tr>
+
         )
     }
 
