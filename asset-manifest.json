@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/arribaStocks/static/css/main.c297af3e.css",
+    "main.js": "/arribaStocks/static/js/main.11682ea0.js",
+    "static/js/453.643774d2.chunk.js": "/arribaStocks/static/js/453.643774d2.chunk.js",
+    "index.html": "/arribaStocks/index.html",
+    "main.c297af3e.css.map": "/arribaStocks/static/css/main.c297af3e.css.map",
+    "main.11682ea0.js.map": "/arribaStocks/static/js/main.11682ea0.js.map",
+    "453.643774d2.chunk.js.map": "/arribaStocks/static/js/453.643774d2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c297af3e.css",
+    "static/js/main.11682ea0.js"
+  ]
+}
