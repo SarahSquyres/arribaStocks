@@ -4,6 +4,7 @@ import StockRow from "./StockRow";
 import { mockCompanyDetails } from "../constants/mock";
 import Header from "./Header"
 import Overview from "./Overview";
+import Chart from "./Chart";
 
 const Dashboard = () => {
     return <div className="container">
@@ -46,6 +47,9 @@ const Dashboard = () => {
                 price={300} 
                 changePercent={10.0}
                 currency="USD"/>
+            </div>
+            <div className="container">
+                <Chart/>
             </div>
         </div>
     </div>
