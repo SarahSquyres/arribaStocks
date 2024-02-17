@@ -13,7 +13,7 @@ function App() {
                 <StockRow ticker="NVDA" />
                 <StockRow ticker="AAPL" />
                 <StockRow ticker="SMCI" />
-                <StockRow ticker="MSFT" />
+                <StockRow ticker="TTD" />
               </ul>
           </div>
         </div>

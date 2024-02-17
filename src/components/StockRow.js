@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import { iex } from "../config/iex.js"
 import { stock } from "../resources/stock.js"
 
-const changeStyle = {
-    color: '#FF0000',
-    fontSize: '0.8rem',
-    marginLeft: 5
-}
-
 class StockRow extends Component {
     // Constructor: object blueprints
     constructor(props) {
@@ -20,6 +14,12 @@ class StockRow extends Component {
             percent_change: null
         }
     }
+    changeStyle() {
+        return {
+            color: (this.state.dollar_change > 0) ? '#4caf50' : '#e53935',
+            fontSize: '0.8rem',
+            marginLeft: 5}
+    }
 
     applyData(data) {
         console.log(data);
@@ -30,7 +30,7 @@ class StockRow extends Component {
             date: data.date,
             time: data.time,
         });
-    
+
         const handleOpenPrice = (openPrice) => {
             console.log(this.props.ticker, openPrice)
             const dollarChange = this.state.price - openPrice.price;
@@ -42,7 +42,7 @@ class StockRow extends Component {
             });
 
         };
-    
+
         stock.getTodaysOpen(this.props.ticker, handleOpenPrice);
     }
 
@@ -57,7 +57,7 @@ class StockRow extends Component {
             <li className="list-group-item">
                 {/* Ticker and latest price */}
                 <b>{this.props.ticker}</b> ${this.state.price}
-                <span className="change" style={changeStyle}>
+                <span className="change" style={this.changeStyle()}>
                     ${this.state.dollar_change}
                     {this.state.percent_change}
                 </span>
