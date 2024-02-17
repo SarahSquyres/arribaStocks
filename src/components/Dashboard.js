@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useContext, useEffect, useState }  from "react";
 import StockRow from "./StockRow";
-import { mockCompanyDetails } from "../constants/mock";
 import Header from "./Header"
 import Overview from "./Overview";
+import StockContext from "../context/StockContext";
+import { fetchStockDetails, fetchQuote } from "../api/stock-api";
 
 const Dashboard = () => {
+    const { stockSymbol } = useContext(StockContext);
+    const [stockDetails, setStockDetails] = useState({});
+    const [quote, setQuote] = useState({});
+
+    useEffect(() => {
+        const updateStockDetails = async () => {
+          try {
+            const result = await fetchStockDetails(stockSymbol);
+            setStockDetails(result);
+          } catch (error) {
+            setStockDetails({});
+            console.log(error);
+          }
+        };
+    
+        const updateStockOverview = async () => {
+          try {
+            const result = await fetchQuote(stockSymbol);
+            setQuote(result);
+          } catch (error) {
+            setQuote({});
+            console.log(error);
+          }
+        };
+    
+        updateStockDetails();
+        updateStockOverview();
+      }, [stockSymbol]);
+
     return (
         <div className="container">
             <header className="text-center mb-4">
@@ -12,14 +42,15 @@ const Dashboard = () => {
                 <p className="lead">Track your favorite stocks in real time!</p>
             </header>
             <div className="text-center mb-4">
-                <Header name={mockCompanyDetails.name} />
+                <Header details={stockDetails} />
             </div>
             <div className="container text-center mb-4">
                 <Overview
-                    symbol={mockCompanyDetails.ticker}
-                    price={300}
-                    changePercent={10.0}
-                    currency="USD" />
+                    symbol={stockSymbol}
+                    price={quote.pc}
+                    change={quote.d}
+                    changePercent={quote.dp}
+                    currency={stockDetails.currency} />
             </div>
             <div className="container">
                 <h3 className="text-center">The Magnificent 7</h3>

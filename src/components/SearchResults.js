@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import StockContext from "../context/StockContext";
 
 const SearchResults = ({ results }) => {
-    return <ul className="list-group scrollable-menu">
-        {results.map((item) => {
-            return <li key={item.symbol} className="list-group-item list-group-item-action">
-                <span>{item.symbol}</span>
-                <span>{item.description}</span>
-            </li>
-        })}
-    </ul>;
+    const { setStockSymbol } = useContext(StockContext);
+    return (
+        <ul className="list-group scrollable-menu">
+
+            {results.map((item) => {
+                return (
+                    <li
+                        key={item.symbol}
+                        className="list-group-item list-group-item-action"
+                        onClick={() => setStockSymbol(item.symbol)}
+                    >
+                        <span>{item.symbol}</span>
+                        <span>{item.description}</span>
+                    </li>
+                );
+            })}
+        </ul>
+    );
 };
 
 export default SearchResults;

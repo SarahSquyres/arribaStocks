@@ -1,21 +1,31 @@
 import React, { useState } from "react";
-import { mockSearchResults } from "../constants/mock";
 import SearchResults from "./SearchResults";
+import { searchSymbol } from "../api/stock-api";
 
 const Search = () => {
     const [input, setInput] = useState("")
-    const [bestMatches, setBestMatches] = useState(mockSearchResults.result)
+    const [bestMatches, setBestMatches] = useState([]);
 
+    const updateBestMatches = async () => {
+        try {
+          if (input) {
+            const searchResults = await searchSymbol(input);
+            const result = searchResults.result;
+            setBestMatches(result);
+          }
+        } catch (error) {
+          setBestMatches([]);
+          console.log(error);
+        }
+      };
+      
     const clear = () => {
         setInput("");
         setBestMatches([]);
     };
 
-    const updateBestMatches = () => {
-        setBestMatches(mockSearchResults.result);
-    };
-
-    return <div>
+    return (
+        <div>
         <input type="text" value={input} placeholder="Search Stock Here" onChange={(event) => {
             setInput(event.target.value);
         }}
@@ -33,6 +43,7 @@ const Search = () => {
         </button>
         {input && bestMatches.length > 0 ? <SearchResults results={bestMatches} /> : null}
     </div>
+    );
 }
 
 export default Search;
