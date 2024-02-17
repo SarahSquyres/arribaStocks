@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { iex } from "../config/iex.js"
 
+const changeStyle = {
+    color: '#FF0000',
+    fontSize: '0.8rem',
+    marginLeft: 5
+}
+
 class StockRow extends Component {
     constructor(props) {
         super(props)
@@ -9,31 +15,28 @@ class StockRow extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         // query API
         const url = `${iex.base_url}/data/CORE/INTRADAY_PRICES/${this.props.ticker}?&token=${iex.api_token}`
         fetch(url)
-        .then((response) => response.json())
-        .then((data => {
-            console.log(data[data.length - 2]);
-            this.setState({
-                data: data[data.length - 2]
-            })
-        }))
-
+            .then((response) => response.json())
+            .then((data => {
+                this.setState({
+                    data: data[data.length - 2]
+                })
+            }))
     }
 
-    render () {
+    render() {
         return (
-            <tr>
-                <td>{this.props.ticker}</td>
-                <td>{this.state.data.close}</td>
-                <td>{this.state.data.date}</td>
-                <td>{this.state.data.label}</td>
-            </tr>
+            <li className="list-group-item">
+            <b>{this.props.ticker}</b> ${this.state.data.close}
+            <span className="change" style={changeStyle}>
+              -$0.45 (-0.06%)
+            </span>
+            </li>
         )
     }
-
 }
 
 export default StockRow;

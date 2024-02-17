@@ -7,22 +7,16 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <table className="table mt-5">
-          <thead>
-            <tr>
-              <th>Ticker</th>
-              <th>Price</th>
-              <th>Date</th>
-              <th>Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            <StockRow ticker="nvda" />
-            <StockRow ticker="goog" />
-            <StockRow ticker="msft" />
-            <StockRow ticker="smci" />
-          </tbody>
-        </table>
+        <div className="col-md-5 mt-5">
+          <div className="card">
+              <ul className="list-group list-group-flush">
+                <StockRow ticker="NVDA" />
+                <StockRow ticker="AVGO" />
+                <StockRow ticker="SMCI" />
+                <StockRow ticker="MSFT" />
+              </ul>
+          </div>
+        </div>
       </div>    
     </div>
   );
