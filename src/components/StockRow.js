@@ -32,7 +32,15 @@ class StockRow extends Component {
         });
     
         const handleOpenPrice = (openPrice) => {
-            console.log(openPrice);
+            console.log(this.props.ticker, openPrice)
+            const dollarChange = this.state.price - openPrice.price;
+            const percentChange = (dollarChange / openPrice.price) * 100;
+
+            this.setState({
+                dollar_change: dollarChange.toFixed(2), // Format to two decimal places
+                percent_change: percentChange.toFixed(2) + "%",
+            });
+
         };
     
         stock.getTodaysOpen(this.props.ticker, handleOpenPrice);
@@ -50,9 +58,8 @@ class StockRow extends Component {
                 {/* Ticker and latest price */}
                 <b>{this.props.ticker}</b> ${this.state.price}
                 <span className="change" style={changeStyle}>
-                    {this.state.dollar_change}
+                    ${this.state.dollar_change}
                     {this.state.percent_change}
-                    $change (change%)
                 </span>
             </li>
         )

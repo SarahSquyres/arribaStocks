@@ -27,10 +27,10 @@ export const stock = {
     // Get day open data to calculate day percent and price change 
     getTodaysOpen: (ticker, callback) => {
         fetch(stock.todaysOpenURL(ticker))
-        .then((response) => response.json())
-        .then((data) => {
-            callback(stock.formatPriceDataOpen(data))
-        })
+            .then((response) => response.json())
+            .then((data) => {
+                callback(stock.formatPriceDataOpen(data))
+            })
     },
 
     todaysOpenURL: (ticker) => {
