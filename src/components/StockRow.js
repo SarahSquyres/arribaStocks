@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { iex } from "../config/iex.js"
+import { stock } from "../resources/stock.js"
 
 const changeStyle = {
     color: '#FF0000',
@@ -8,6 +9,7 @@ const changeStyle = {
 }
 
 class StockRow extends Component {
+    // Constructor: object blueprints
     constructor(props) {
         super(props)
         this.state = {
@@ -15,28 +17,33 @@ class StockRow extends Component {
         }
     }
 
+    applyData(data) {
+        // Use setState to update the component's state
+        this.setState({
+            // Latest data
+            data: data
+        })
+    }
+
+    // componentDidMount: a lifecycle event of component, when the component loads
     componentDidMount() {
-        // query API
-        const url = `${iex.base_url}/data/CORE/INTRADAY_PRICES/${this.props.ticker}?&token=${iex.api_token}`
-        fetch(url)
-            .then((response) => response.json())
-            .then((data => {
-                this.setState({
-                    data: data[data.length - 2]
-                })
-            }))
+        // bind(this): method used to bind an object to a function, reference object using this, in our case this is referencing data object
+        stock.latestPrice(this.props.ticker, this.applyData.bind(this))
+
     }
 
     render() {
         return (
             <li className="list-group-item">
-            <b>{this.props.ticker}</b> ${this.state.data.close}
-            <span className="change" style={changeStyle}>
-              -$0.45 (-0.06%)
-            </span>
+                {/* Ticker and latest price */}
+                <b>{this.props.ticker}</b> ${this.state.data.price}
+                <span className="change" style={changeStyle}>
+                    $change (change%)
+                </span>
             </li>
         )
     }
+
 }
 
 export default StockRow;
