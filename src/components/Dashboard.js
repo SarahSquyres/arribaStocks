@@ -3,6 +3,7 @@ import Card from "./Card"
 import StockRow from "./StockRow";
 import { mockCompanyDetails } from "../constants/mock";
 import Header from "./Header"
+import Overview from "./Overview";
 
 const Dashboard = () => {
     return <div className="container">
@@ -40,6 +41,12 @@ const Dashboard = () => {
                     </div>
                 </div>
             </Card>
+            <div>
+                <Overview symbol={mockCompanyDetails.ticker} 
+                price={300} 
+                changePercent={10.0}
+                currency="USD"/>
+            </div>
         </div>
     </div>
 };
