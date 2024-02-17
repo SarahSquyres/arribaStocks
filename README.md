@@ -5,34 +5,39 @@ Empower your investment journey with Arriba Stocks, an application for investors
 ## Table of Contents
 
 * [Description](#description)
-* [User Story](#user-story)
-* [Technologies Used](#technologies-used)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributors](#contributors)
+* [App Preview](#app-preview)
+* [Getting Started](#getting-started)
+* [Dependencies and Tech Stack](#dependencies-and-tech-stack)
+* [Installing](#installing)
+* [Executing Program](#executing-program)
+* [Authors](#Authors)
 * [License](#license)
-* [Sources](#sources)
+* [Acknowledgments](#acknowledgments)
 
 ## Description
 
-With ArribaStocks users can search for the stocks they are interested in and retrieve up-to-the-minute information on price action and day change.
+With ArribaStocks, users can search for the stocks they are interested in and retrieve up-to-the-minute information on the day's price action, day change, and percent change.  They also have a continuous view of the Magnificent 7 stocks to keep an eye on the overall market.
 
 ## App Preview
 ![Screenshot of launchpage](./src/assets/arribaStock.JPG)
 Application Preview
 
-
 ## Getting Started
 
-### Dependencies
+### Dependencies and Tech Stack
 
-* Bootstrap
-* IEX Cloud API
-* Finnhub API
+* Bootstrap: for styling
+* IEX Cloud API: to retrieve minute-by-minute data
+* Finnhub API: stock search
+* React
+* JavaScript
 
 ### Installing
 
-* Run npm install to install all dependencies
+* To install dependencies:
+```
+npm install
+```
 
 ### Executing program
 
@@ -41,52 +46,23 @@ Application Preview
 npm start
 ```
 
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
 ## Authors
 
 Contributors names and contact info
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+Sarah Squyres  
+GitHub: https://github.com/SarahSquyres 
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Great Walkthrough for IEX Cloud](https://www.youtube.com/watch?v=onSKOD3RPo8&list=PLjItgYqIzJ9VOBgwZ82D9kjQ_QtM5R4u5)
+* [Greath Walkthrough for Finnhub and Functionality](https://www.youtube.com/playlist?list=PLJN4kg0Hkqi2fu6ifNAkw9TLwTOH-e0-K)
+* [Gemini AI](https://gemini.google.com/app)
 
-## Arriba Stocks
-
-Refactor in bite-size chunks so code is easier to read and maintain, reduce complexity, 
-reduce code duplication, easier to debug, easier to add new features, and ultimately reduce maintenance costs
-
-Added comments
-
-Re-defined API terms to make code more versatile if we need to use different API
-
-Reformatting to be able to update state independently, so we can have better control over which properties are changing
-
-Challenge: originally, i planned on retrieving previous day info to calculate percent and price change but the API required to pay to access historical data so i had to pivot and use the stock open price to calculate day change info
 
 
