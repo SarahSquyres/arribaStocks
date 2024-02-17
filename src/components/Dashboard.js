@@ -16,6 +16,7 @@ const Dashboard = () => {
                             <p className="lead">Track your favorite stocks in real time!</p>
                         </header>
                         <Header name={mockCompanyDetails.name}/>
+                        <h3>The Magnificent 7</h3>
                         <table className="table g-4 table-striped table-sm table-bordered">
                             <thead>
                                 <tr>
@@ -30,7 +31,10 @@ const Dashboard = () => {
                                 <StockRow ticker="NVDA" />
                                 <StockRow ticker="AAPL" />
                                 <StockRow ticker="MSFT" />
-                                <StockRow ticker="TTD" />
+                                <StockRow ticker="TSLA" />
+                                <StockRow ticker="AMZN" />
+                                <StockRow ticker="GOOGL" />
+                                <StockRow ticker="META" />
                             </tbody>
                         </table>
                     </div>
