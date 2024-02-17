@@ -28,9 +28,9 @@ Application Preview
 
 ### Dependencies and Tech Stack
 
-* Bootstrap: for styling
-* IEX Cloud API: to retrieve minute-by-minute data
-* Finnhub API: stock search
+* [Bootstrap](https://getbootstrap.com/): for styling
+* [IEX Cloud API](https://iexcloud.io/): to retrieve minute-by-minute data
+* [Finnhub API](https://finnhub.io/): stock search
 * React
 * JavaScript
 

@@ -1,3 +1,4 @@
+// Fetches and renders real-time stock data using IEX Cloud API
 import React, { Component } from 'react';
 import { stock } from "../resources/stock.js"
 
@@ -13,6 +14,8 @@ class StockRow extends Component {
             percent_change: null
         }
     }
+
+    // Changes text color based on positive or negative price movements
     changeStyle() {
         return {
             color: (this.state.dollar_change > 0) ? '#4caf50' : '#e53935'
@@ -28,6 +31,7 @@ class StockRow extends Component {
             time: data.time,
         });
 
+        // Calculates dollar and percent change
         const handleOpenPrice = (openPrice) => {
             const dollarChange = this.state.price - openPrice.price;
             const percentChange = (dollarChange / openPrice.price) * 100;

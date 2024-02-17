@@ -1,7 +1,8 @@
+// Dynamically renders stock information for requested stock
 import React from "react";
 import Card from "./Card";
 
-const Overview = ( {symbol, price, change, changePercent, currency}) => {
+const Overview = ({ symbol, price, change, changePercent, currency }) => {
     return <Card>
         <span>{symbol}</span>
         <div>
@@ -10,9 +11,7 @@ const Overview = ( {symbol, price, change, changePercent, currency}) => {
             </span>
             <span className={`${change > 0 ? "text-success" : "text-danger"}`}>
                 {change}<span>({changePercent})%</span>
-
             </span>
-
         </div>
     </Card>
 }

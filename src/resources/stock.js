@@ -1,3 +1,4 @@
+// Fetches stock data from IEX Cloud API
 import { iex } from "../config/iex.js";
 
 export const stock = {
@@ -15,6 +16,7 @@ export const stock = {
         return `${iex.base_url}/data/CORE/INTRADAY_PRICES/${ticker}?&token=${iex.api_token}`
     },
 
+    // Structures data to access relevant data
     formatPriceData: (data) => {
         const stockData = data[data.length - 2]
         const formattedData = {}

@@ -1,3 +1,4 @@
+// Mock data to help with styling
 export const mockSearchResults =
 {
     "count": 4,
