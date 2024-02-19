@@ -18,7 +18,7 @@ class StockRow extends Component {
     // Changes text color based on positive or negative price movements
     changeStyle() {
         return {
-            color: (this.state.dollar_change > 0) ? '#4caf50' : '#e53935'
+            color: (this.state.dollar_change > 0) ? '#14a44d' : '#dc3545'
         }
     }
 

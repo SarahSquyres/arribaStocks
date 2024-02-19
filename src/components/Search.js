@@ -27,7 +27,7 @@ const Search = () => {
 
     // Conditionally renders clear button and search results
     return (
-        <div>
+        <div className="search">
             <input type="text" value={input} placeholder="Search Stock Here" onChange={(event) => {
                 setInput(event.target.value);
             }}
@@ -37,10 +37,10 @@ const Search = () => {
                     }
                 }} />
             {input && (
-                <button type="button" className="btn btn-outline-secondary btn-sm" text="Clear" onClick={clear}>
-                    X
+                <button type="button" className="searchBtn btn btn-outline-dark btn-sm" text="Clear" onClick={clear}>
+                    Clear
                 </button>)}
-            <button onClick={updateBestMatches} className="btn btn-outline-secondary btn-sm">
+            <button onClick={updateBestMatches} className="searchBtn btn btn-outline-dark btn-sm">
                 Search
             </button>
             {input && bestMatches.length > 0 ? <SearchResults results={bestMatches} /> : null}

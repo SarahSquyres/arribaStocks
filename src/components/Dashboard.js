@@ -46,17 +46,12 @@ const Dashboard = () => {
     <div className="container">
 
       <header className="text-center mb-4">
-        <h1 className="display-4">ArribaStocks</h1>
+        <h1>ArribaStocks</h1>
         <p className="lead">Track your favorite stocks in real time!</p>
       </header>
 
 
-      <div className="text-center mb-4">
-        <Header details={stockDetails} />
-      </div>
-
-
-      <div className="container text-center mb-4">
+      <div className="result container text-center mb-4">
         <Overview
           symbol={stockSymbol}
           price={quote.pc}
@@ -66,18 +61,14 @@ const Dashboard = () => {
       </div>
 
 
-      <div className="container">
+      <div className="text-center mb-4">
+        <Header details={stockDetails} />
+      </div>
+
+
+      <div className="bigContainer">
         <h3 className="text-center">The Magnificent 7</h3>
-        <table className="table g-4 table-striped table-sm table-bordered">
-          <thead>
-            <tr>
-              <th>Ticker</th>
-              <th>Price</th>
-              <th>Change</th>
-              <th>Date(EST)</th>
-              <th>Time</th>
-            </tr>
-          </thead>
+        <table>
           <tbody>
             <StockRow ticker="NVDA" />
             <StockRow ticker="AAPL" />
