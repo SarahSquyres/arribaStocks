@@ -10,7 +10,7 @@ const Overview = ({ symbol, price, change, changePercent, currency }) => {
 
         <div className="searchInfo">
             <span>
-                Price:  ${price} {currency}
+                ${price} {currency}
             </span>
 
             <span className={`${change > 0 ? "text-success" : "text-danger"}`}>

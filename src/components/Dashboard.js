@@ -47,7 +47,7 @@ const Dashboard = () => {
 
       <header className="text-center mb-4">
         <h1>ArribaStocks</h1>
-        <p className="lead">Track your favorite stocks in real time!</p>
+        <p className="lead">Track your favorite stocks. In real time.</p>
       </header>
 
 
@@ -67,7 +67,7 @@ const Dashboard = () => {
 
 
       <div className="bigContainer">
-        <h3 className="text-center">The Magnificent 7</h3>
+        <h3 className="text-center">Super Seven Ticker</h3>
         <table>
           <tbody>
             <StockRow ticker="NVDA" />
