@@ -66,6 +66,9 @@ Inspiration, code snippets, etc.
 * [Greath Walkthrough for Finnhub and Functionality](https://www.youtube.com/playlist?list=PLJN4kg0Hkqi2fu6ifNAkw9TLwTOH-e0-K)
 * [Gemini AI](https://gemini.google.com/app)
 * [How to Create a Scrolling Ticker](https://codepen.io/lewismcarey/pen/GJZVoG)
+* [Background Image Opacity](https://www.youtube.com/watch?v=LQsjNmkqUOc)
+* [Background Image](https://unsplash.com/photos/close-up-photo-of-monitor-displaying-graph-Wb63zqJ5gnE)
+
 
 
 

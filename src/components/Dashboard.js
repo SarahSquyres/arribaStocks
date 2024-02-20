@@ -56,6 +56,9 @@ const Dashboard = () => {
       </header>
 
 
+      <div className="bg"></div>
+
+
       <div className="result container text-center mb-4">
         <Overview
           symbol={stockSymbol}
