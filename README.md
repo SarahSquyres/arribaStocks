@@ -1,6 +1,6 @@
 # ArribaStocks [![GitHub License](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/)
 
-Empower your investment journey with Arriba Stocks, an application for investors who need to monitor real-time stock prices.
+Empower your investment journey with Arriba Stocks. Track and analyze your favorite stocks in real-time, gaining an edge with timely insights and data-driven decisions.
 
 [ArribaStocks Deployed Application Link](https://arriba-stocks-94c27f9624eb.herokuapp.com/)
 
@@ -18,7 +18,7 @@ Empower your investment journey with Arriba Stocks, an application for investors
 
 ## Description
 
-With ArribaStocks, users can search for the stocks they are interested in and retrieve up-to-the-minute information on the day's price action, day change, and percent change.  They also have a continuous view of the Magnificent 7 stocks to keep an eye on the overall market.
+With ArribaStocks, find and track your favorite stocks with real-time data, including the day's price movement, daily change, and percentage change. Stay ahead of the curve with a dedicated section showcasing the top 7 high-performing and influential stocks ("Super Seven") for insightful market monitoring.
 
 ## App Preview
 ![Screenshot of launchpage](./src/assets/arribaStock.JPG)
@@ -33,24 +33,28 @@ Application Preview
 * [Finnhub API](https://finnhub.io/): stock search
 * React
 * JavaScript
+* JSX
+* Git Version Control
+* GitHub
+* Heroku
 
 ### Installing
 
-* To install dependencies:
+* To install all dependencies run the following command in Git:
+
 ```
 npm install
 ```
 
 ### Executing program
 
-* To run the program execute following command:
+* To run the React program execute the following command:
+
 ```
 npm start
 ```
 
 ## Authors
-
-Contributors names and contact info
 
 Sarah Squyres  
 GitHub: https://github.com/SarahSquyres 
@@ -61,7 +65,9 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+This project would not have been possible without the incredible support of several individuals and resources. First, I owe a debt of gratitude to the countless developers who freely share their knowledge and expertise online. Their tutorials, articles, and open-source projects provided invaluable guidance and inspiration throughout my journey.
+
+Inspiration, code snippets, etc:
 * [Great Walkthrough for IEX Cloud](https://www.youtube.com/watch?v=onSKOD3RPo8&list=PLjItgYqIzJ9VOBgwZ82D9kjQ_QtM5R4u5)
 * [Greath Walkthrough for Finnhub and Functionality](https://www.youtube.com/playlist?list=PLJN4kg0Hkqi2fu6ifNAkw9TLwTOH-e0-K)
 * [Gemini AI](https://gemini.google.com/app)
