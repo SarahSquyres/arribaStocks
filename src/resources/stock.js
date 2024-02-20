@@ -18,7 +18,7 @@ export const stock = {
 
     // Structures data to access relevant data
     formatPriceData: (data) => {
-        const stockData = data[data.length - 2]
+        const stockData = data[data.length - 1]
         const formattedData = {}
         formattedData.price = stockData.close
         formattedData.date = stockData.date
