@@ -191,3 +191,13 @@ td {
   left: 0;
   bottom: 0;
 }
+
+@media (max-width: 850px) {
+  /* Styles for screens less than 768px wide */
+  h1{
+    font-size: 3rem;
+  };
+  .firstLetter {
+    font-size: 4rem;
+  }
+}
