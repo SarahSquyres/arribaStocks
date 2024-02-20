@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Hedvig Letters Sans
+- Font Author: Copyright 2023 The Hedvig Letters Project Authors (https://github.com/KanonFoundry/HedvigLetters)
+- Font Source: http://fonts.gstatic.com/s/hedvigletterssans/v2/CHy_V_PfGVjobSBkihHWDT98RVp37w8jQJ1N3Twgi1w.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
