@@ -1,31 +1,36 @@
 body {
-  background-color: #7581a7;
+  background-color: #3a3c45;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1 {
   margin-top: 4rem;
   font-size: 2.75rem;
   font-weight: bold;
+  color: white;
 }
 
 h3 {
   margin-top: 4rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
 }
 
-.searchInfo{
+.searchInfo {
   display: flex;
   justify-content: space-evenly;
   font-size: 1.3rem;
 }
 
 .result {
-  background-color: #d5dbfa; 
+  background-color: rgb(202, 211, 246);
   border-radius: 5px;
-  font-weight: lighter;
-  border: 1px solid #394054;
   margin-top: 3rem;
+  box-shadow: 2px 3px #151313;
+  font-weight: bold;
+  max-width: 35rem;
 }
 
 .search {
@@ -33,15 +38,15 @@ h3 {
   margin: auto;
 }
 
-.searchBtn{
+.searchBtn {
   margin-top: -5px;
   margin-left: 5px;
 }
 
-.list-group{
+.list-group {
   max-height: 100px;
   margin-bottom: 20px;
-  overflow:scroll;
+  overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -49,17 +54,16 @@ h3 {
   background-color: #7B97AB;
 }
 
-.bigContainer {
-  margin:auto;
-  font-weight: lighter;
+.tickerContainer {
+  margin: auto;
 }
 
-tbody{
+tbody {
   display: flex;
   flex-direction: row;
-  width: 400vw;
+  width: 500vw;
   overflow-x: auto;
-  background-color: #d5dbfa;
+  background-color: rgb(202, 211, 246);
   transform: translateX(100%);
   animation: moving 30s linear infinite;
 }
@@ -68,28 +72,49 @@ tbody{
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
 
 tr {
-  display:flex;
+  display: flex;
+  border-color: black;
+  border-width: 1px;
 }
 
 td {
   text-align: center;
-  margin-left:0.5rem;
 }
 
 .symbolStyle {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 table {
-  background-color: #d5dbfa; 
+  background-color: rgb(202, 211, 246);
+  border-bottom: black;
+  border-width: 20px;
 }
 
 input {
   background-color: #d5dbfa;
+}
+
+p {
+  color: white;
+}
+
+nav {
+  background-color: black;
+}
+
+.logo {
+  height: 3rem;
+  margin-left: 2rem;
+}
+
+mainContainer {
+  width: 100vw;
 }

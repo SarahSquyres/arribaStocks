@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import Navbar from "./Navbar";
 import StockRow from "./StockRow";
 import Header from "./Header"
 import Overview from "./Overview";
@@ -43,7 +44,10 @@ const Dashboard = () => {
   // Structure that renders to browser
   return (
 
-    <div className="container">
+    <div className="mainContainer">
+
+      <Navbar/>
+      
 
       <header className="text-center mb-4">
         <h1>ArribaStocks</h1>
@@ -66,7 +70,7 @@ const Dashboard = () => {
       </div>
 
 
-      <div className="bigContainer">
+      <div className="tickerContainer">
         <h3 className="text-center">Super Seven Ticker</h3>
         <table>
           <tbody>

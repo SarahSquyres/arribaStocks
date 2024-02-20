@@ -37,10 +37,10 @@ const Search = () => {
                     }
                 }} />
             {input && (
-                <button type="button" className="searchBtn btn btn-outline-dark btn-sm" text="Clear" onClick={clear}>
+                <button type="button" className="searchBtn btn btn-outline-light btn-sm" text="Clear" onClick={clear}>
                     Clear
                 </button>)}
-            <button onClick={updateBestMatches} className="searchBtn btn btn-outline-dark btn-sm">
+            <button onClick={updateBestMatches} className="searchBtn btn btn-outline-light btn-sm">
                 Search
             </button>
             {input && bestMatches.length > 0 ? <SearchResults results={bestMatches} /> : null}

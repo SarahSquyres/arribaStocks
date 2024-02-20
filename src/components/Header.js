@@ -1,14 +1,13 @@
-// Dynamically inserts requested stock dame
+// Dynamically inserts requested stock name
 import React from "react";
 import Search from "./Search";
 
 const Header = ({ name }) => {
-    return <>
+    return ( 
         <div>
-            <h1 className="text">{name}</h1>
             <Search />
         </div>
-    </>
-}
+    );
+};
 
 export default Header;
