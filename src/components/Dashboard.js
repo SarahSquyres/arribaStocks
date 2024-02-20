@@ -5,6 +5,7 @@ import Header from "./Header"
 import Overview from "./Overview";
 import StockContext from "../context/StockContext";
 import { fetchStockDetails, fetchQuote } from "../api/stock-api";
+import Footer from "./Footer";
 
 // Utilize useState hook to dynamically render stock information
 const Dashboard = () => {
@@ -44,13 +45,13 @@ const Dashboard = () => {
   // Structure that renders to browser
   return (
 
-    <div className="mainContainer">
+    <div>
 
-      <Navbar/>
-      
+      <Navbar />
+
 
       <header className="text-center mb-4">
-        <h1>ArribaStocks</h1>
+        <h1><span className="firstLetter">A</span>rriba<span className="firstLetter">S</span>tocks</h1>
         <p className="lead">Track your favorite stocks. In real time.</p>
       </header>
 
@@ -61,7 +62,8 @@ const Dashboard = () => {
           price={quote.pc}
           change={quote.d}
           changePercent={quote.dp}
-          currency={stockDetails.currency} />
+          currency={stockDetails.currency}
+        />
       </div>
 
 
@@ -70,20 +72,23 @@ const Dashboard = () => {
       </div>
 
 
-      <div className="tickerContainer">
-        <h3 className="text-center">Super Seven Ticker</h3>
-        <table>
-          <tbody>
-            <StockRow ticker="NVDA" />
-            <StockRow ticker="AAPL" />
-            <StockRow ticker="MSFT" />
-            <StockRow ticker="TSLA" />
-            <StockRow ticker="AMZN" />
-            <StockRow ticker="GOOGL" />
-            <StockRow ticker="META" />
-          </tbody>
-        </table>
+      <h3 className="text-center">Super Seven Ticker</h3>
+      <div className="ticker-wrap">
+        <tbody>
+          <StockRow ticker="NVDA" />
+          <StockRow ticker="AAPL" />
+          <StockRow ticker="MSFT" />
+          <StockRow ticker="TSLA" />
+          <StockRow ticker="AMZN" />
+          <StockRow ticker="GOOGL" />
+          <StockRow ticker="META" />
+        </tbody>
       </div>
+
+
+      <Footer />
+
+
     </div>
   );
 };

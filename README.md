@@ -65,7 +65,7 @@ Inspiration, code snippets, etc.
 * [Great Walkthrough for IEX Cloud](https://www.youtube.com/watch?v=onSKOD3RPo8&list=PLjItgYqIzJ9VOBgwZ82D9kjQ_QtM5R4u5)
 * [Greath Walkthrough for Finnhub and Functionality](https://www.youtube.com/playlist?list=PLJN4kg0Hkqi2fu6ifNAkw9TLwTOH-e0-K)
 * [Gemini AI](https://gemini.google.com/app)
-* [How to Create a Scrolling Ticker](https://www.youtube.com/watch?v=bZ872X-ghfI)
+* [How to Create a Scrolling Ticker](https://codepen.io/lewismcarey/pen/GJZVoG)
 
 
 

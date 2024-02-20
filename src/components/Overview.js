@@ -3,7 +3,9 @@ import React from "react";
 import Card from "./Card";
 
 const Overview = ({ symbol, price, change, changePercent, currency }) => {
-    return <Card>
+    
+    return (
+    <Card>
         <span className="symbolStyle">
             {symbol}
         </span>
@@ -21,7 +23,7 @@ const Overview = ({ symbol, price, change, changePercent, currency }) => {
                 ({changePercent})%
             </span>
         </div>
-    </Card>
+    </Card>)
 }
 
 export default Overview;
