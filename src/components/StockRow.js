@@ -2,8 +2,9 @@
 import React, { Component } from 'react';
 import { stock } from "../resources/stock.js"
 
+// defines the structure and behavior of a single stock row in the table
 class StockRow extends Component {
-    // Constructor: object blueprints
+    // Constructor: object blueprints, initializes the state with empty values
     constructor(props) {
         super(props)
         this.state = {
@@ -23,7 +24,7 @@ class StockRow extends Component {
     }
 
     applyData(data) {
-        // Use setState to update the component's state
+        // Use setState to update the component's state with latest data received from the API
         this.setState({
             // Latest data
             price: data.price,
@@ -37,7 +38,8 @@ class StockRow extends Component {
             const percentChange = (dollarChange / openPrice.price) * 100;
 
             this.setState({
-                dollar_change: dollarChange.toFixed(2), // Format to two decimal places
+                // Format to two decimal places
+                dollar_change: dollarChange.toFixed(2), 
                 percent_change: percentChange.toFixed(2) + "%",
             });
         };
@@ -50,6 +52,7 @@ class StockRow extends Component {
         stock.latestPrice(this.props.ticker, this.applyData.bind(this))
     }
 
+    // return JSX structure for the table row
     render() {
         return (
             <tr>

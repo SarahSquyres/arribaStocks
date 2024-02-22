@@ -1,9 +1,11 @@
 // Logic for updating stock information using Finnhub API
 
+// stores the base URL for Finnhub API endpoints
 const basePath = "https://finnhub.io/api/v1";
 
-// Query symbol
+// Queries API for stock symbols matching the search query
 export const searchSymbol = async (query) => {
+    // Constructs the API URL with query and API key
     const url = `${basePath}/search?q=${query}&token=${process.env.REACT_APP_API_KEY}`;
     const response = await fetch(url);
     // Error handling
@@ -14,8 +16,9 @@ export const searchSymbol = async (query) => {
     return await response.json();
 };
 
-// Query stock details
+// Retrieves information for the queried stock symbol
 export const fetchStockDetails = async (stockSymbol) => {
+    // Constructs the API URL with stock symbol and API key
     const url = `${basePath}/stock/profile2?symbol=${stockSymbol}&token=${process.env.REACT_APP_API_KEY}`;
     const response = await fetch(url);
     // Error handling
@@ -26,8 +29,9 @@ export const fetchStockDetails = async (stockSymbol) => {
     return await response.json();
 };
 
-// Query Stock Price
+// Fetches the latest quote for the queried stock symbol
 export const fetchQuote = async (stockSymbol) => {
+    // constructs URL with stock symbol and API key
     const url = `${basePath}/quote?symbol=${stockSymbol}&token=${process.env.REACT_APP_API_KEY}`;
     const response = await fetch(url);
     // Error handling
@@ -35,23 +39,5 @@ export const fetchQuote = async (stockSymbol) => {
         const message = `An error has occured: ${response.status}`;
         throw new Error(message);
     }
-    return await response.json();
-};
-
-// Query Historical Data - Will Use in Future for Chart
-export const fetchHistoricalData = async (
-    stockSymbol,
-    resolution,
-    from,
-    to
-) => {
-    const url = `${basePath}/stock/candle?symbol=${stockSymbol}&resolution=${resolution}&from=${from}&to=${to}&token=${process.env.REACT_APP_API_KEY}`;
-    const response = await fetch(url);
-
-    if (!response.ok) {
-        const message = `An error has occured: ${response.status}`;
-        throw new Error(message);
-    }
-
     return await response.json();
 };
