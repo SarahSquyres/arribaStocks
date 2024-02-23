@@ -22,7 +22,6 @@ With ArribaStocks, find and track your favorite stocks with real-time data, incl
 
 ## App Preview
 ![Screenshot of launchpage](./src/assets/arribaStock.JPG)
-Application Preview
 
 ## Getting Started
 
