@@ -10,7 +10,7 @@ export const searchSymbol = async (query) => {
     const response = await fetch(url);
     // Error handling
     if (!response.ok) {
-        const message = `An error has occured: ${response.status}`;
+        const message = `An error has occurred: ${response.status}`;
         throw new Error(message);
     }
     return await response.json();
@@ -23,7 +23,7 @@ export const fetchStockDetails = async (stockSymbol) => {
     const response = await fetch(url);
     // Error handling
     if (!response.ok) {
-        const message = `An error has occured: ${response.status}`;
+        const message = `An error has occurred: ${response.status}`;
         throw new Error(message);
     }
     return await response.json();
@@ -36,7 +36,7 @@ export const fetchQuote = async (stockSymbol) => {
     const response = await fetch(url);
     // Error handling
     if (!response.ok) {
-        const message = `An error has occured: ${response.status}`;
+        const message = `An error has occurred: ${response.status}`;
         throw new Error(message);
     }
     return await response.json();
