@@ -87,7 +87,6 @@ const Dashboard = () => {
           <StockRow ticker="META" />
         </tbody>
       </div>
-      <p className="text-center"><a href="https://iexcloud.io" target="_blank">Data provided by IEX Cloud</a></p>
 
 
       <Footer />
