@@ -8,9 +8,13 @@ const Search = () => {
     const [input, setInput] = useState("")
     // Creates a state variable with an initial value of empty array to store the stock symbols found by search
     const [bestMatches, setBestMatches] = useState([]);
+    // Creates a state variable that holds a boolean value representing if data is being loaded, initially set to false
+    const [isLoading, setIsLoading] = useState(false);
 
     // Asynchronous function triggered when the user types in search bar, or clicks search
     const updateBestMatches = async () => {
+        // Set loading to true before fetching
+        setIsLoading(true);
         try {
             // If there is an input in the search bar
             if (input) {
@@ -21,10 +25,13 @@ const Search = () => {
                 // Updates bestMatches variable
                 setBestMatches(result)
             }
-        // Error handling, clears input and bestMatches, resetting search
+            // Error handling, clears input and bestMatches, resetting search
         } catch (error) {
             setBestMatches([]);
             console.log(error);
+        } finally {
+            // Set loading to false after fetch is complete
+            setIsLoading(false);
         }
     };
 
@@ -43,12 +50,7 @@ const Search = () => {
                 // Triggers setInput function on each character change
                 setInput(event.target.value);
             }}
-                // Trigger updateBestMatches on Enter key press
-                onSubmit={(event) => {
-                    if (event.target === "Enter") {
-                        updateBestMatches();
-                    }
-                }} />
+            />
             {/* Conditionally renders Clear button */}
             {input && (
                 <button type="button" className="searchBtn btn btn-outline-light btn-sm" text="Clear" onClick={clear}>
@@ -56,7 +58,7 @@ const Search = () => {
                 </button>)}
             {/* Displays Search button, triggers updateBestMatches on click */}
             <button onClick={updateBestMatches} className="searchBtn btn btn-outline-light btn-sm">
-                Search
+            {isLoading ? "Loading..." : "Search"}
             </button>
             {/* Conditionally renders SearchResults component if there is input & at least one matching symbol is found */}
             {/* Passes bestMatches array as props to SearchResults component */}
