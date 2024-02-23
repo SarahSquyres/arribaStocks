@@ -4,9 +4,11 @@ import { stock } from "../resources/stock.js"
 
 // defines the structure and behavior of a single stock row in the table
 class StockRow extends Component {
-    // Constructor: object blueprints, initializes the state with empty values
+    // Constructor function: takes in properties passed to component (object blueprints) 
     constructor(props) {
+        // Calls constructor of parent React component, cannot access child components without this
         super(props)
+        // Initializes the state of the component with empty values
         this.state = {
             price: null,
             date: null,
@@ -24,7 +26,7 @@ class StockRow extends Component {
     }
 
     applyData(data) {
-        // Use setState to update the component's state with latest data received from the API
+        // Use setState to dynamically update the component's state with latest data received from the API
         this.setState({
             // Latest data
             price: data.price,
@@ -43,16 +45,18 @@ class StockRow extends Component {
                 percent_change: percentChange.toFixed(2) + "%",
             });
         };
+        // Calls getTodaysOpen and once the opening price data is available, calls handleOpenPrice (as a callback function)
         stock.getTodaysOpen(this.props.ticker, handleOpenPrice);
     }
 
     // componentDidMount: a lifecycle event of component, when the component loads
     componentDidMount() {
-        // bind(this): method used to bind an object to a function, reference object using this, in our case this is referencing data object
+        // Calls the latestPrice function and passes two arguments, the ticker and applyData.bind callback
+        // bind(this): method used to bind an object to a function, in our case (this) is referencing current state of data object
         stock.latestPrice(this.props.ticker, this.applyData.bind(this))
     }
 
-    // return JSX structure for the table row
+    // return JSX structure for the table row, renders to screen
     render() {
         return (
             <tr>

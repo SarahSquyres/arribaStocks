@@ -24,7 +24,9 @@ export const stock = {
     formatPriceData: (data) => {
         // Extracts the second-to-last element from the data array and assigns it to the stockData
         const stockData = data[data.length - 2]
+        // Assigns empty object to formattedData
         const formattedData = {}
+        // Assigns values to price, date, and time; use stockData that contains raw data fetched from IEX
         formattedData.price = stockData.close
         formattedData.date = stockData.date
         formattedData.time = stockData.label
@@ -52,7 +54,9 @@ export const stock = {
     formatPriceDataOpen: (data) => {
         // Extracts the first element from the data array and assigns it to the firstStockData
         const firstStockData = data[0]
+        // Assigns empty object to firstFormattedData
         const firstFormattedData = {}
+        // Assigns values to price, date, and time; use stockData that contains raw data fetched from IEX
         firstFormattedData.price = firstStockData.close
         firstFormattedData.date = firstStockData.date
         firstFormattedData.time = firstStockData.label
