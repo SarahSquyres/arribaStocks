@@ -19,7 +19,7 @@ const Search = () => {
                 // Extracts the result data from the response
                 const result = searchResults.result;
                 // Updates bestMatches variable
-                setBestMatches(result);
+                setBestMatches(result)
             }
         // Error handling, clears input and bestMatches, resetting search
         } catch (error) {
@@ -60,7 +60,7 @@ const Search = () => {
             </button>
             {/* Conditionally renders SearchResults component if there is input & at least one matching symbol is found */}
             {/* Passes bestMatches array as props to SearchResults component */}
-            {input && bestMatches.length > 0 ? <SearchResults results={bestMatches} /> : null}
+            {input && bestMatches.length > 0 ? <SearchResults results={bestMatches} clear={clear} /> : null}
         </div>
     );
 }
