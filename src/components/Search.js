@@ -1,7 +1,7 @@
 // Search bar Functionality
 import React, { useState } from "react";
 import SearchResults from "./SearchResults";
-import { searchSymbol } from "../api/stock-api";
+import { searchSymbol } from "../api/finhb-api";
 
 const Search = () => {
     // Creates a state variable with an initial value of empty string to store search query

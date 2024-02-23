@@ -4,7 +4,7 @@ import StockRow from "./StockRow";
 import Header from "./Header"
 import Overview from "./Overview";
 import StockContext from "../context/StockContext";
-import { fetchStockDetails, fetchQuote } from "../api/stock-api";
+import { fetchStockDetails, fetchQuote } from "../api/finhb-api";
 import Footer from "./Footer";
 
 // Utilize useState hook to dynamically render stock information

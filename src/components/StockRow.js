@@ -1,6 +1,6 @@
 // Fetches and renders real-time stock data using IEX Cloud API
 import React, { Component } from 'react';
-import { stock } from "../resources/stock.js"
+import { stock } from "../api/iex-api.js"
 
 // defines the structure and behavior of a single stock row in the table
 class StockRow extends Component {
