@@ -67,8 +67,8 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 This project would not have been possible without the incredible support of several individuals and resources. First, I owe a debt of gratitude to the countless developers who freely share their knowledge and expertise online. Their tutorials, articles, and open-source projects provided invaluable guidance and inspiration throughout my journey.
 
 Inspiration, code snippets, etc:
-* [Great Walkthrough for IEX Cloud](https://www.youtube.com/watch?v=onSKOD3RPo8&list=PLjItgYqIzJ9VOBgwZ82D9kjQ_QtM5R4u5)
-* [Greath Walkthrough for Finnhub and Functionality](https://www.youtube.com/playlist?list=PLJN4kg0Hkqi2fu6ifNAkw9TLwTOH-e0-K)
+* [IEX Cloud and Functionality](https://www.youtube.com/watch?v=onSKOD3RPo8&list=PLjItgYqIzJ9VOBgwZ82D9kjQ_QtM5R4u5)
+* [Finnhub and Functionality](https://www.youtube.com/playlist?list=PLJN4kg0Hkqi2fu6ifNAkw9TLwTOH-e0-K)
 * [Gemini AI](https://gemini.google.com/app)
 * [How to Create a Scrolling Ticker](https://codepen.io/lewismcarey/pen/GJZVoG)
 * [Background Image Opacity](https://www.youtube.com/watch?v=LQsjNmkqUOc)
