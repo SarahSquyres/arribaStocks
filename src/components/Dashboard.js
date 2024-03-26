@@ -6,6 +6,7 @@ import Overview from "./Overview";
 import StockContext from "../context/StockContext";
 import { fetchStockDetails, fetchQuote } from "../api/finhb-api";
 import Footer from "./Footer";
+import Graph from "./Graph";
 
 // Utilize useState hook to dynamically render stock information
 const Dashboard = () => {
@@ -73,6 +74,9 @@ const Dashboard = () => {
       <div className="text-center mb-4">
         <Header details={stockDetails} />
       </div>
+
+
+      <Graph />
 
 
       <h3 className="text-center">Super Seven Ticker</h3>
