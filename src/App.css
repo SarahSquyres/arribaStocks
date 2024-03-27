@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   font-style: normal;
   min-height: 100%;
-  overflow: hidden;
+  overflow-y: scroll;
   margin: 0;
   padding-bottom: 6rem;
 
@@ -122,10 +122,15 @@ input {
   cursor: pointer;
 }
 
+.graphContainer {
+  height: 30rem;
+  width: 40rem;
+  margin: auto;
+}
 
 /* Ticker */
 h3 {
-  margin-top: 4rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
   color: white;
   font-weight: lighter;
@@ -199,5 +204,16 @@ td {
   };
   .firstLetter {
     font-size: 4rem;
+  }
+  .graphContainer{
+    height: 20rem;
+    width: 25rem;
+  }
+}
+
+@media (max-width: 400px){
+  .graphContainer{
+    height: 15rem;
+    width: 15rem;
   }
 }

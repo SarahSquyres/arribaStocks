@@ -75,7 +75,7 @@ const Dashboard = () => {
         <Header details={stockDetails} />
       </div>
 
-      <div className="container">
+      <div className="graphContainer">
         <Graph />
       </div>
 
