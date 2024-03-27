@@ -75,9 +75,9 @@ const Dashboard = () => {
         <Header details={stockDetails} />
       </div>
 
-
-      <Graph />
-
+      <div className="container">
+        <Graph />
+      </div>
 
       <h3 className="text-center">Super Seven Ticker</h3>
       <div className="ticker-wrap">
