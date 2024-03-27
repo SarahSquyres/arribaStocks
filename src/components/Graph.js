@@ -3,21 +3,7 @@ import React, { useRef, useEffect, memo } from 'react';
 
 function TradingViewWidget() {
     const container = useRef();
-    const configScript = `
-        {
-          "autosize": false,
-          "symbol": "NASDAQ:MSFT",
-          "interval": "D",
-          "timezone": "Etc/UTC",
-          "theme": "dark",
-          "style": "1",
-          "locale": "en",
-          "enable_publishing": false,
-          "allow_symbol_change": true,
-          "calendar": false,
-          "support_host": "https://www.tradingview.com"
-        }
-    `;
+
 
     useEffect(() => {
       if (!container.current.querySelector('script[src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"]')) {
@@ -25,10 +11,19 @@ function TradingViewWidget() {
         script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
         script.type = "text/javascript";
         script.innerHTML = `
-          window.onload = function() {
-            embedWidget(${configScript});
-          };
-        `;
+        {
+            "autosize": false,
+            "symbol": "NASDAQ:MSFT",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "calendar": false,
+            "support_host": "https://www.tradingview.com"
+          }`;
         container.current.appendChild(script);
       }
     }, []);
