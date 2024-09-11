@@ -16,6 +16,20 @@
 }
 
 .tradingview-widget-container {
-  height: 30rem !important;
-  width: 50rem !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tradingview-widget-container__widget {
+  height: 30rem ;
+  width: 50rem ;
+}
+
+.chart-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem;
+  gap: 1rem;
 }

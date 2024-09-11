@@ -7,31 +7,38 @@ export default function Graph() {
      const [newSymbol, setnewSymbol] = useState("AAPL");
 
      const container = useRef(null);
+     const chartRef = useRef(null);
 
-
-
-     useEffect(() => {
-          if (!container.current.querySelector('script[src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"]')) {
-               const script = document.createElement("script");
-               script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
-               script.type = "text/javascript";
-               script.innerHTML = `
-        {
-            "autosize": false,
-            "symbol": "${newSymbol}",
-            "interval": "D",
-            "timezone": "Etc/UTC",
-            "theme": "dark",
-            "style": "2",
-            "locale": "en",
-            "enable_publishing": false,
-            "allow_symbol_change": false,
-            "calendar": false,
-            "support_host": "https://www.tradingview.com"
-          }`;
-               container.current.appendChild(script);
+     function createGraph() {
+          const chartContainer = container.current.querySelector('.tradingview-widget-container__widget');
+          if (chartContainer) {
+            chartContainer.innerHTML = '';
           }
-     }, [newSymbol]);
+          const script = document.createElement('script');
+          script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+          script.type = "text/javascript";
+          script.async = true;
+          script.innerHTML = `
+            {
+              "autosize": false,
+              "symbol": "${newSymbol}",
+              "interval": "D",
+              "timezone": "Etc/UTC",
+              "theme": "dark",
+              "style": "2",
+              "locale": "en",
+              "enable_publishing": false,
+              "allow_symbol_change": false,
+              "calendar": false,
+              "support_host": "https://www.tradingview.com"
+            }`;
+            chartContainer.appendChild(script);
+          console.log("GRAPH CREATED")
+        }
+        
+        useEffect(() => {
+          createGraph();
+        }, [newSymbol]);
 
      const handleSymbolChange = (e) => {
           e.preventDefault();
@@ -41,13 +48,14 @@ export default function Graph() {
      const handleNewSymbol = (e) => {
           e.preventDefault();
           setnewSymbol(symbol);
+          console.log("SEARCHING FOR", newSymbol, "...")
      }
 
      return (
           <>
-               <form onSubmit={handleNewSymbol}>
+               <form className="chart-form" onSubmit={handleNewSymbol}>
                     <input name="symbol" placeholder="Search for a stock" onChange={(e) => { handleSymbolChange(e) }} />
-                    <button type="submit">Submit Symbol</button>
+                    <button type="submit">Submit</button>
                </form>
                <div className="tradingview-widget-container" ref={container}>
                     <div
