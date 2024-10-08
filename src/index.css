@@ -80,11 +80,15 @@ body {
   min-height: 30rem;
   min-width: 15rem;
   max-width: 18rem;
+  position: absolute
 }
 .css-193q0wg-MuiListItem-root:hover {
   background-color: darkgray !important
 }
 
+.css-1jzyn6t:hover{
+  background-color: darkgray !important
+}
 
 @media screen and (max-width: 414px) {
   .css-193q0wg-MuiListItem-root {
