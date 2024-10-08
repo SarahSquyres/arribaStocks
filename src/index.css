@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: rgba(0, 2, 39, 0.808);
+  background-color: rgba(9, 13, 22, 0.219);
 }
 
 .logo {
@@ -70,7 +70,8 @@ body {
 
 .searchList {
   z-index: 20;
-  background-color: rgba(205, 205, 228, 0.918);
+  background-color: rgba(30, 30, 36, 0.822);
+  color:antiquewhite;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -79,6 +80,9 @@ body {
   min-height: 30rem;
   min-width: 15rem;
   max-width: 18rem;
+}
+.css-193q0wg-MuiListItem-root:hover {
+  background-color: darkgray;
 }
 
 

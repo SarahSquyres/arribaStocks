@@ -81,7 +81,15 @@ export default function Graph() {
      return (
           <>
                <form className="chart-form" onSubmit={handleNewSymbol}>
-                    <TextField name="symbol" id="outlined-size-small" size="small" label="Search for a stock" variant="outlined" value={symbol} onChange={(e) => { setSymbol(e.target.value) }} />
+                    <TextField
+                         name="symbol"
+                         id="outlined-size-small"
+                         size="small"
+                         label="Search for a stock"
+                         variant="outlined"
+                         value={symbol}
+                         onChange={(e) => { setSymbol(e.target.value) }} 
+                         />
                     <Button type="submit" variant="outlined">Search</Button>
                     <div className='loading'>
                          <p>{isLoading ? <CircularProgress color="inherit" /> : " "}</p>
