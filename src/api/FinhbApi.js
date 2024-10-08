@@ -1,4 +1,4 @@
-import { API_KEY } from "./ApiKeys";
+import { API_KEY } from "./ApiKey";
 const basePath = "https://finnhub.io/api/v1";
 
 export const searchSymbol = async (query) => {
