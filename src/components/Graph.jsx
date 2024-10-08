@@ -1,6 +1,12 @@
 // TradingViewWidget.jsx
 import React, { useRef, useEffect, useState } from 'react';
 import { searchSymbol } from "../api/FinhbApi";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
 
 export default function Graph() {
 
@@ -74,28 +80,30 @@ export default function Graph() {
      return (
           <>
                <form className="chart-form" onSubmit={handleNewSymbol}>
-                    
-                    <input name="symbol" placeholder="Search for a stock" value={symbol} onChange={(e) => { setSymbol(e.target.value) }} />
-                    <button type="submit">Submit</button>
+
+                    <TextField name="symbol" id="outlined-size-small" size="small" label="Search for a stock" variant="outlined" value={symbol} onChange={(e) => { setSymbol(e.target.value) }} />
+                    <Button type="submit" variant="outlined">Search</Button>
                     <div className='loading'>
-                    <p>{isLoading ? "Loading..." : " "}</p>
+                         <p>{isLoading ? "Loading..." : " "}</p>
                     </div>
                     {bestMatches.length > 0 ?
-                         <ul className='searchList'>
+                         <List className='searchList'>
                               {bestMatches.map((symbol) => (
-                                   <li key={symbol.symbol}
+                                   <ListItem key={symbol.symbol}
                                         onClick={() => {
                                              setnewSymbol(symbol.symbol);
                                              setBestMatches([]);
                                              setSymbol('')
                                         }
                                         }>
-                                        <span>{symbol.symbol}</span>
-                                        <br></br>
-                                        <span>{symbol.description}</span>
-                                   </li>
+                                        <ListItemButton>
+                                             <ListItemText primary={symbol.symbol} />
+                                             <ListItemText primary={symbol.description} />
+                                        </ListItemButton>
+
+                                   </ListItem>
                               ))}
-                         </ul> : null}
+                         </List> : null}
                </form>
                <div className="tradingview-widget-container" ref={container}>
                     <div

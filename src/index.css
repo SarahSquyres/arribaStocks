@@ -10,9 +10,13 @@
   font-style: normal;
 }
 
+body {
+  background-color: rgba(245, 245, 245, 0.904);
+}
+
 .logo {
   height: 3rem;
-  margin-left: 2rem;
+  margin: 1rem;
 }
 
 .tradingview-widget-container {
@@ -24,44 +28,48 @@
 }
 
 .tradingview-widget-container__widget {
-  height: 30rem ;
-  width: 50rem ;
+  height: 30rem;
+  width: 50rem;
 }
+
 @media screen and (max-width: 810px) {
   .tradingview-widget-container__widget {
-    height: 30rem ;
-    width: 40rem ;
+    height: 30rem;
+    width: 40rem;
   }
 }
+
 @media screen and (max-width: 630px) {
   .tradingview-widget-container__widget {
     width: 27rem;
     height: 30rem;
   }
 }
+
 @media screen and (max-width: 414px) {
   .tradingview-widget-container__widget {
     width: 20rem;
     height: 30rem;
   }
 }
+
 .chart-form {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   margin: 3rem;
   gap: 1rem;
 
 }
-
+.css-1u169s7-MuiList-root {
+  position: absolute;
+  margin-top: 30rem;
+}
 .searchList {
   z-index: 20;
-  position: absolute;
-  top: 8rem;
   background-color: antiquewhite;
   display: flex;
   align-items: center;
   flex-direction: column;
-  list-style: none;
 }
