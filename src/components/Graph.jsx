@@ -7,6 +7,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Graph() {
 
@@ -80,11 +81,10 @@ export default function Graph() {
      return (
           <>
                <form className="chart-form" onSubmit={handleNewSymbol}>
-
                     <TextField name="symbol" id="outlined-size-small" size="small" label="Search for a stock" variant="outlined" value={symbol} onChange={(e) => { setSymbol(e.target.value) }} />
                     <Button type="submit" variant="outlined">Search</Button>
                     <div className='loading'>
-                         <p>{isLoading ? "Loading..." : " "}</p>
+                         <p>{isLoading ? <CircularProgress color="inherit" /> : " "}</p>
                     </div>
                     {bestMatches.length > 0 ?
                          <List className='searchList'>
@@ -100,7 +100,6 @@ export default function Graph() {
                                              <ListItemText primary={symbol.symbol} />
                                              <ListItemText primary={symbol.description} />
                                         </ListItemButton>
-
                                    </ListItem>
                               ))}
                          </List> : null}

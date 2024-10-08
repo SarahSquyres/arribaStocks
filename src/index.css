@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: rgba(245, 245, 245, 0.904);
+  background-color: rgba(0, 2, 39, 0.808);
 }
 
 .logo {
@@ -62,14 +62,34 @@ body {
   gap: 1rem;
 
 }
+
 .css-1u169s7-MuiList-root {
-  position: absolute;
-  margin-top: 30rem;
+  position: absolute !important;
+  margin-top: 37rem !important;
 }
+
 .searchList {
   z-index: 20;
-  background-color: antiquewhite;
+  background-color: rgba(205, 205, 228, 0.918);
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow: scroll;
+  max-height: 30rem;
+  min-height: 30rem;
+  min-width: 15rem;
+  max-width: 18rem;
+}
+
+
+@media screen and (max-width: 414px) {
+  .css-193q0wg-MuiListItem-root {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+
+.css-9c0h7a-MuiButtonBase-root-MuiListItemButton-root {
+  flex-direction: column;
+  text-align: center;
 }
