@@ -24,7 +24,7 @@ body {
   align-items: center;
   flex-direction: column;
   z-index: 0;
-  position: relative
+  position: relative !important
 }
 
 .tradingview-widget-container__widget {
@@ -82,7 +82,7 @@ body {
   max-width: 18rem;
 }
 .css-193q0wg-MuiListItem-root:hover {
-  background-color: darkgray;
+  background-color: darkgray !important
 }
 
 
