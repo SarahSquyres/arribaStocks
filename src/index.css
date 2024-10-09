@@ -102,7 +102,7 @@ body {
   text-align: center;
 }
 
-ul {
+.MuiList-root {
   position: absolute;
-  z-index: 20
+  z-index: 20;
 }
