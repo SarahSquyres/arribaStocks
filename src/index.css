@@ -63,10 +63,10 @@ body {
 
 }
 
-.css-1u169s7-MuiList-root {
+/* .css-1u169s7-MuiList-root {
   position: absolute !important;
   margin-top: 37rem !important;
-}
+} */
 
 .searchList {
   z-index: 20;
@@ -80,13 +80,11 @@ body {
   min-height: 30rem;
   min-width: 15rem;
   max-width: 18rem;
-  position: absolute
-}
-.css-193q0wg-MuiListItem-root:hover {
-  background-color: darkgray !important
+  position: absolute !important;
+  margin-top: 37rem !important;
 }
 
-.css-1jzyn6t:hover{
+.listItem:hover{
   background-color: darkgray !important
 }
 
@@ -97,12 +95,7 @@ body {
   }
 }
 
-.css-9c0h7a-MuiButtonBase-root-MuiListItemButton-root {
+.listItemButton {
   flex-direction: column;
   text-align: center;
-}
-
-.MuiList-root-MuiList-padding-searchList css-v6nt3u{
-  position: absolute;
-  z-index: 20;
 }

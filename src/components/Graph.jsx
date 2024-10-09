@@ -88,23 +88,24 @@ export default function Graph() {
                          label="Search for a stock"
                          variant="outlined"
                          value={symbol}
-                         onChange={(e) => { setSymbol(e.target.value) }} 
-                         />
-                    <Button type="submit" variant="outlined">Search</Button>
+                         onChange={(e) => { setSymbol(e.target.value) }}
+                    />
+                    <Button type="submit" variant="outlined" className='searchBtn'>Search</Button>
                     <div className='loading'>
                          <p>{isLoading ? <CircularProgress color="inherit" /> : " "}</p>
                     </div>
                     {bestMatches.length > 0 ?
                          <List className='searchList'>
                               {bestMatches.map((symbol) => (
-                                   <ListItem key={symbol.symbol}
+                                   <ListItem
+                                   className='listItem' key={symbol.symbol}
                                         onClick={() => {
                                              setnewSymbol(symbol.symbol);
                                              setBestMatches([]);
                                              setSymbol('')
                                         }
                                         }>
-                                        <ListItemButton>
+                                        <ListItemButton className='listItemButton'>
                                              <ListItemText primary={symbol.symbol} />
                                              <ListItemText primary={symbol.description} />
                                         </ListItemButton>
