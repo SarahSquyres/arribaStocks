@@ -19,6 +19,55 @@ body {
   margin: 1rem;
 }
 
+/* Form */
+.chart-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem;
+  gap: 1rem;
+
+}
+
+.searchBtn {
+  border-color: 2px solid black !important;
+  height: 20rem;
+}
+
+.searchList {
+  z-index: 20;
+  background-color: rgba(30, 30, 36, 0.822);
+  color: antiquewhite;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  max-height: 30rem;
+  min-height: 30rem;
+  min-width: 15rem;
+  max-width: 18rem;
+  position: absolute !important;
+  margin-top: 37rem !important;
+}
+
+.listItem:hover {
+  background-color: darkgray !important
+}
+
+@media screen and (max-width: 414px) {
+  .listItem {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+
+.listItemButton {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Trading View Chart */
 .tradingview-widget-container {
   display: flex;
   align-items: center;
@@ -51,51 +100,4 @@ body {
     width: 20rem;
     height: 30rem;
   }
-}
-
-.chart-form {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  margin: 3rem;
-  gap: 1rem;
-
-}
-
-/* .css-1u169s7-MuiList-root {
-  position: absolute !important;
-  margin-top: 37rem !important;
-} */
-
-.searchList {
-  z-index: 20;
-  background-color: rgba(30, 30, 36, 0.822);
-  color:antiquewhite;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  overflow: scroll;
-  max-height: 30rem;
-  min-height: 30rem;
-  min-width: 15rem;
-  max-width: 18rem;
-  position: absolute !important;
-  margin-top: 37rem !important;
-}
-
-.listItem:hover{
-  background-color: darkgray !important
-}
-
-@media screen and (max-width: 414px) {
-  .css-193q0wg-MuiListItem-root {
-    padding-left: 1px;
-    padding-right: 1px;
-  }
-}
-
-.listItemButton {
-  flex-direction: column;
-  text-align: center;
 }

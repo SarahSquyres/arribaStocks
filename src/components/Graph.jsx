@@ -90,7 +90,15 @@ export default function Graph() {
                          value={symbol}
                          onChange={(e) => { setSymbol(e.target.value) }}
                     />
-                    <Button type="submit" variant="outlined" className='searchBtn'>Search</Button>
+                    <Button
+                         sx={{
+                              color: '#353E43',
+                              border: "1px #808080 solid"
+                         }}
+                         type="submit"
+                         variant="outlined">
+                         Search
+                    </Button>
                     <div className='loading'>
                          <p>{isLoading ? <CircularProgress color="inherit" /> : " "}</p>
                     </div>
@@ -98,7 +106,8 @@ export default function Graph() {
                          <List className='searchList'>
                               {bestMatches.map((symbol) => (
                                    <ListItem
-                                   className='listItem' key={symbol.symbol}
+                                        className='listItem' 
+                                        key={symbol.symbol}
                                         onClick={() => {
                                              setnewSymbol(symbol.symbol);
                                              setBestMatches([]);
