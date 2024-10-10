@@ -11,3 +11,13 @@ export const searchSymbol = async (query) => {
     }
     return await response.json();
 };
+
+export const getQuote = async (symbol) => {
+    const url = `${basePath}/quote?symbol=${symbol}&token=${apiKey}`;
+    const res = await fetch(url);
+    if(!res.ok) {
+        const message = `An error has occurred ${res.status}`;
+        throw new Error(message)
+    }
+    return await res.json()
+}

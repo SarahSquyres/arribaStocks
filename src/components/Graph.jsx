@@ -57,9 +57,6 @@ export default function Graph() {
                          const result = searchResults.result;
                          const filteredResult = result.filter(result => result.type === 'Common Stock');
                          setBestMatches(filteredResult);
-                         console.log("SEARCH", searchResults)
-                         console.log("BEST MATCHES", bestMatches);
-                         console.log("RESULTS", filteredResult)
                     }
                } catch (error) {
                     setBestMatches([]);
@@ -106,7 +103,7 @@ export default function Graph() {
                          <List className='searchList'>
                               {bestMatches.map((symbol) => (
                                    <ListItem
-                                        className='listItem' 
+                                        className='listItem'
                                         key={symbol.symbol}
                                         onClick={() => {
                                              setnewSymbol(symbol.symbol);
