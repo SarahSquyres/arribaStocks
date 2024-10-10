@@ -23,12 +23,44 @@ body {
 .ticker-list {
   display: flex;
   flex-direction: row;
-  overflow: scroll;
+  overflow: hidden;
+  background-color: rgba(30, 30, 36, 0.822);
 }
 
 .ticker-list-items {
   display: flex;
   flex-direction: row;
+  padding-right: 100%;
+
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 50s;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(-650%, 0, 0);
+  }
+}
+
+.list-item-name {
+  width: 5rem;
+  display: flex;
+  color: antiquewhite
+}
+
+.list-item-name-date {
+  width: 13rem;
+  border-left: 1px solid rgba(130, 130, 136, 0.534);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: antiquewhite
 }
 
 /* Form */

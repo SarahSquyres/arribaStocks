@@ -43,16 +43,16 @@ export default function StockTicker() {
                <div className='ticker-list'>
                     {stockData.map((stock, index) => (
                          <List key={index} className='ticker-list-items'>
-                              <ListItemText primary={stock.ticker} />
-                              <ListItemText primary={stock.dateString} />
-                              <ListItemText primary={stock.c} />
-                              <ListItemText>
-                                   <span style={{ color: stock.d > 0 ? '#14a44d' : '#dc3545' }}>
+                              <ListItemText className='list-item-name-date' primary={stock.dateString} />
+                              <ListItemText className='list-item-name' primary={stock.ticker} />
+                              <ListItemText className='list-item-name' primary={stock.c} />
+                              <ListItemText className='list-item-name'>
+                                   <span className='list-item-name' style={{ color: stock.d > 0 ? '#38ba6b' : '#d6515e' }}>
                                         {stock.d}
                                    </span>
                               </ListItemText>
-                              <ListItemText>
-                                   <span style={{ color: stock.dp > 0 ? '#14a44d' : '#dc3545' }}>
+                              <ListItemText className='list-item-name'>
+                                   <span className='list-item-name' style={{ color: stock.dp > 0 ? '#38ba6b' : '#d6515e' }}>
                                         {stock.dp}%
                                    </span>
                               </ListItemText>
