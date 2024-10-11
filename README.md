@@ -2,7 +2,7 @@
 
 Empower your investment journey with Arriba Stocks. Track and analyze your favorite stocks in real-time, gaining an edge with timely insights and data-driven decisions.
 
-[ArribaStocks Deployed Application Link](https://dashboard.heroku.com/apps/arribastocks)
+[ArribaStocks Deployed Application Link](https://arribastocks-c926d8455c48.herokuapp.com/)
 
 
 ## Table of Contents
@@ -12,9 +12,7 @@ Empower your investment journey with Arriba Stocks. Track and analyze your favor
 * [Getting Started](#getting-started)
 * [Dependencies and Tech Stack](#dependencies-and-tech-stack)
 * [Installing](#installing)
-* [Executing Program](#executing-program)
 * [Authors](#Authors)
-* [License](#license)
 * [Acknowledgments](#acknowledgments)
 
 
@@ -60,7 +58,9 @@ GitHub: https://github.com/SarahSquyres
 
 ## Acknowledgments
 
-This project would not have been possible without the incredible support of several individuals and resources. First, I owe a debt of gratitude to the countless developers who freely share their knowledge and expertise online. Their tutorials, articles, and open-source projects provided invaluable guidance and inspiration throughout my journey.
+I would like to express my sincere gratitude to the following developers for their invaluable video tutorials. Their guidance and expertise were instrumental in the successful completion of this project.
 
 Inspiration, code snippets, etc:
 * [How to Create a Scrolling Ticker](https://codepen.io/lewismcarey/pen/GJZVoG)
+
+Thank you for sharing your knowledge and skills with the community. Your efforts have made a significant impact on my learning journey!
