@@ -14,9 +14,22 @@ body {
   background-color: rgba(9, 13, 22, 0.219);
 }
 
+/* NavBar */
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .logo {
-  height: 3rem;
+  height: 2rem;
   margin: 1rem;
+}
+
+.first-letter{
+  color: #2da15b;
+  font-size:2rem;
+  font-weight: 500;
 }
 
 /*Ticker */
@@ -40,12 +53,28 @@ body {
 
 @keyframes ticker {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(200%, 0, 0);
     visibility: visible;
   }
 
   100% {
-    transform: translate3d(-650%, 0, 0);
+    transform: translate3d(-700%, 0, 0);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .ticker-list-items {
+    animation-duration: 40s;
+  }
+  @keyframes ticker {
+    0% {
+      transform: translate3d(77%, 0, 0);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translate3d(-700%, 0, 0); /* Adjust the translation value for smaller screens */
+    }
   }
 }
 

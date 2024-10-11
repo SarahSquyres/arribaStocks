@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getQuote } from "../api/FinhbApi";
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { Box } from '@mui/material';
 
 
 export default function StockTicker() {
