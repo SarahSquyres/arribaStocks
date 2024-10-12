@@ -49,6 +49,11 @@ Feel free to clone this project using the following terminal command:
 git clone git@github.com:SarahSquyres/arribaStocks.git
 ```
 
+To install dependencies, run the following command:
+```
+npm i
+```
+
 
 ## Authors
 
