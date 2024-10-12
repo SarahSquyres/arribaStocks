@@ -18,7 +18,7 @@ Empower your investment journey with Arriba Stocks. Track and analyze your favor
 
 ## Description
 
-With ArribaStocks, find and track your favorite stocks with real-time data. Stay ahead of the curve with a scrolling ticker showcasing the top 7 high-performing and influential stocks ("Super Seven") for insightful market monitoring.
+With ArribaStocks, find and track your favorite stocks with real-time data. Stay ahead of the curve with a scrolling ticker showcasing the top high-performing and influential stocks ("Super Seven") for insightful market monitoring.
 
 
 ## App Preview
