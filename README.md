@@ -67,5 +67,6 @@ I would like to express my sincere gratitude to the following developers for the
 
 Inspiration, code snippets, etc:
 * [How to Create a Scrolling Ticker](https://codepen.io/lewismcarey/pen/GJZVoG)
+* [Material UI Login Form](https://www.youtube.com/watch?v=yVT7LLGGr00)
 
 Thank you for sharing your knowledge and skills with the community. Your efforts have made a significant impact on my learning journey!
